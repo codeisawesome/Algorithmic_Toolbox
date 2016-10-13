@@ -9,18 +9,23 @@ n = gets.chomp
 # end
 
 def fib(n)
+  if n == 1
+    return 0
+  end
+  if n == 2
+    return 1
+  end
   n = n.to_i
   starting_fib = 0
-  i = 0
-  f1 = 0
-  f2 = 1
+  i = 2
+  x_min_1 = 0
+  x = 1
   while i < n do
-    f1 = f2 + f1 #f1 = 1
-    f2 = f1 + f2 #f2 = 2
+    x = x_min_1 + x
+    x_min_1 = x - x_min_1
     i += 1
   end
-  if
-  puts f2
+  puts x
 end
 
 
